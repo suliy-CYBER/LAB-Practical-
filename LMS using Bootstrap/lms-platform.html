@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Platform</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      
+        html {
+            scroll-behavior: smooth;
+        }
+
+       
+        .custom-navbar, .custom-footer {
+            background-color: #2962ff;
+        }
+
+        .hero-section {
+            background-color: #d3d3d3;
+            padding: 4rem 2rem;
+        }
+
+        .card-img-placeholder {
+            height: 180px;
+            background-color: #c1cbd5;
+            color: #606e7a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand navbar-dark custom-navbar px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">LMS</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#popular-courses">Courses</a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-dark">Welcome to the LMS Platform</h1>
+            <p class="lead text-muted">Your gateway to knowledge and success. Explore a wide variety of courses and resources.</p>
+            
+            <a href="#popular-courses" class="btn btn-primary btn-lg mt-2">Get Started</a>
+        </div>
+    </header>
+
+    <section class="container py-5 text-center">
+        <h2 class="mb-4 fw-bold">Features</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5 class="fw-bold">Extensive Course Library</h5>
+                <p class="text-muted small">Access courses in a variety of fields and skill levels.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5 class="fw-bold">Interactive Discussions</h5>
+                <p class="text-muted small">Engage in live discussions and group projects.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5 class="fw-bold">Certification</h5>
+                <p class="text-muted small">Earn certificates to showcase your achievements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="popular-courses" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold">Popular Courses</h2>
+        <div class="row">
+   
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://www.simplilearn.com/is-web-development-a-good-career-article" class="card-img-top" alt="Web Development" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Web Development</h5>
+                        <p class="card-text text-muted small">Learn to build modern, responsive websites using HTML, CSS, and JavaScript.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://share.google/MMq13S1PM9FgIm8aH" class="card-img-top" alt="Data Science" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Data Science</h5>
+                        <p class="card-text text-muted small">Master data analysis, visualization, and machine learning techniques.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+    
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://share.google/N0Dj0MUqm5yDp4RZv" class="card-img-top" alt="Digital Marketing" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Digital Marketing</h5>
+                        <p class="card-text text-muted small">Understand SEO, social media marketing, and online branding strategies.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="custom-footer text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1 small">&copy; 2024 LMS Platform. All Rights Reserved.</p>
+            <p class="mb-0 small">
+                <a href="#" class="text-white text-decoration-underline">Privacy Policy</a> | 
+                <a href="#" class="text-white text-decoration-underline">Terms of Use</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const currentTime = new Date();
+        const hour = currentTime.getHours();
+
+        let greeting;
+        if (hour < 12) {
+            greeting = "Good Morning,";
+        } else if (hour < 17) {
+            greeting = "Good Afternoon,";
+        } else {
+            greeting = "Good Evening,";
+        }
+        document.getElementById("greeting").innerHTML = ${greeting}<br>Welcome to the LMS Platform;
+</script>
+<script>
+        const btn = document.getElementById("darkModeToggle");
+
+        btn.onclick = function () {
+        const dark = document.body.dataset.dark !== "true";
+        document.body.dataset.dark = dark;
+
+        document.body.style.backgroundColor = dark ? "#212121" : "white";
+        document.body.style.color = dark ? "white" : "black";
+
+        document.querySelectorAll("section, .card, .card-body, h1, h2, h4, h5, p")
+            .forEach(el => {
+            el.style.backgroundColor = dark ? "#212121" : "";
+            el.style.color = dark ? "white" : "";
+            });
+
+        btn.textContent = dark ? "Light Mode" : "Dark Mode";
+        };
+</script>
+
+</body>
+</html>
